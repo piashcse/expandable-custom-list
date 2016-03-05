@@ -9,7 +9,13 @@ public class StoreModel extends BaseListModel {
 
 
     public Drawable image;
-    public int noOffers;
+    public String storeDescription;
     public String name;
 
+
+    public StoreModel(Drawable image, String storeDescription, String name) {
+        this.image = image;
+        this.storeDescription = storeDescription;
+        this.name = name;
+    }
 }

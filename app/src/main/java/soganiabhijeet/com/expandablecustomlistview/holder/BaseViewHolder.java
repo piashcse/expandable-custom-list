@@ -8,9 +8,10 @@ import soganiabhijeet.com.expandablecustomlistview.model.BaseListModel;
 /**
  * Created by abhijeetsogani on 2/27/16.
  */
-public abstract class BaseViewHolder<T extends BaseListModel> extends RecyclerView.ViewHolder {
+public abstract class BaseViewHolder<T extends BaseListModel> extends RecyclerView.ViewHolder implements View.OnClickListener {
     public BaseViewHolder(View itemView) {
         super(itemView);
+        itemView.setOnClickListener(this);
     }
 
     public abstract void populate(T baseSliderModel);
